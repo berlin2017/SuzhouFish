@@ -1,0 +1,95 @@
+<!--pages/home/home_index.wxml-->
+<view class='home_container'>
+
+  <view class='header'></view>
+
+  <scroll-view class='scrollview' scroll-y='true'>
+
+    <swiper indicator-dots='true' indicator-color='white' indicator-active-color='red' autoplay='true' circular='true' class='swip'>
+      <block wx:for="{{homeInfo.banner}}">
+        <swiper-item>
+          <image src="{{item.thumb}}" class="slide-image" mode='scaleToFill' bindtap='toDetail' data-url='{{item.url}}' data-name='{{item.name}}' />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class='mui-content-dingzhi'>
+
+      <view class='dingzhi_grid'>
+
+        <view class='dingzhi_cell' wx:for='{{homeInfo.nav[1].level}}' bindtap='toForm' data-url='{{item.url}}' data-id='{{item.id}}'>
+          <view class='dingzhi_cell_item' style='border-radius: {{first_css[index]}};'>
+            <image class='dingzhi_cell_image' src='{{item.thumb}}' mode='scaleToFill'></image>
+            <view class='dingzhi_cell_title'>{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class='mui-content-dingzhi-chanpin'>景观</view>
+
+    </view>
+
+    <view class='content_image_layout' bindtap='toDetail' data-id='{{item.id}}'>
+      <image src='{{homeInfo.ads[0].thumb}}' mode='scaleToFill' class='content_image'></image>
+    </view>
+
+
+    <view class='mui-content-dingzhi'>
+
+      <view class='dingzhi_grid'>
+
+        <view class='dingzhi_cell' wx:for='{{homeInfo.nav[2].level}}' bindtap='toForm' data-url='{{item.url}}' data-id='{{item.id}}'>
+          <view class='dingzhi_cell_item' style='border-radius: {{secend_css[index]}};'>
+            <image class='dingzhi_cell_image' src='http://szjidingqclxcx.0512iis.com/images/111.jpg' mode='scaleToFill'></image>
+            <view class='dingzhi_cell_title'>{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class='mui-content-dingzhi-chanpin' style='background-color:#4c644c;'>景观</view>
+
+    </view>
+
+    <view class='content_image_layout' bindtap='toDetail' data-id='{{item.id}}'>
+      <image src='{{homeInfo.ads[1].thumb}}' mode='scaleToFill' class='content_image'></image>
+    </view>
+
+    <view class='mui-content-dingzhi'>
+
+      <view class='dingzhi_grid'>
+
+        <view class='dingzhi_cell' wx:for='{{homeInfo.nav[3].level}}' bindtap='toForm' data-url='{{item.url}}' data-id='{{item.id}}'>
+          <view class='dingzhi_cell_item' style='border-radius: {{secend_css[index]}};'>
+            <image class='dingzhi_cell_image' src='http://szjidingqclxcx.0512iis.com/images/111.jpg' mode='scaleToFill'></image>
+            <view class='dingzhi_cell_title'>{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class='mui-content-dingzhi-chanpin' style='background-color:#4c644c;'>景观</view>
+
+    </view>
+
+    <view class='content_image_layout' bindtap='toDetail' data-id='{{item.id}}'>
+      <image src='{{homeInfo.ads[2].thumb}}' mode='scaleToFill' class='content_image'></image>
+    </view>
+
+    <view class='mui-content-dingzhi'>
+
+      <view class='dingzhi_grid'>
+
+        <view class='dingzhi_cell' wx:for='{{homeInfo.nav[4].level}}' bindtap='toForm' data-url='{{item.url}}' data-id='{{item.id}}'>
+          <view class='dingzhi_cell_item' style='border-radius: {{secend_css[index]}};'>
+            <image class='dingzhi_cell_image' src='http://szjidingqclxcx.0512iis.com/images/111.jpg' mode='scaleToFill'></image>
+            <view class='dingzhi_cell_title'>{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class='mui-content-dingzhi-chanpin' style='background-color:#4c644c;'>景观</view>
+
+    </view>
+
+    <include src='../common/footer.wxml' />
+  </scroll-view>
+</view>

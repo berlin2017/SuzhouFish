@@ -1,0 +1,66 @@
+/* pages/yuyue/yuyue.wxss */
+@import "../common/footer.wxss";
+@import "../jingguan/jingguan_index.wxss";
+
+.detail_container {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.back_icon {
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  top: 5px;
+  position: absolute;
+  z-index: 100;
+}
+
+.name_layout {
+  position: relative;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 2.15rem;
+  border-bottom:1px solid gainsboro;
+}
+
+.name_layout2{
+  padding: 10px;
+  position: relative;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 6rem;
+  border-bottom:1px solid gainsboro;
+}
+
+.name_title {
+  color: #999;
+  float: left;
+  font-size: 0.7rem;
+  line-height: 2.15rem;
+}
+
+.input {
+  float: right;
+  margin-left: 10px;
+  height: 100%;
+  line-height: 2.15rem;
+  color: #3d4145;
+  width: 100%;
+}
+
+.textarea{
+  float: right;
+  margin-left: 10px;
+  height: 100%;
+  line-height: 2.15rem;
+  color: #3d4145;
+  width: 100%;
+  border: 1px solid gray;
+}

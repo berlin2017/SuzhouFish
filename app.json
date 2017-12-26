@@ -1,0 +1,61 @@
+{
+  "pages": [
+    
+    "pages/home/home_index",
+    "pages/detail/detail",
+    
+    "pages/yuyue/yuyue",
+    "pages/list/list",
+    "pages/jingguan/jingguan_index",
+    "pages/map/map_index",
+    
+    "pages/jinli/jinli_index",
+    "pages/devices/devices_index",
+    "pages/user/user_index",
+    "pages/common/footer",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "苏州祥和",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home_index",
+        "text": "首页",
+        "iconPath": "resources/ic_home.png",
+        "selectedIconPath": "resources/ic_home_light.png"
+      },
+      {
+        "pagePath": "pages/jingguan/jingguan_index",
+        "text": "景观",
+        "iconPath": "resources/ic_fengjing.png",
+        "selectedIconPath": "resources/ic_fengjing_light.png"
+      },
+      {
+        "pagePath": "pages/jinli/jinli_index",
+        "text": "锦鲤",
+        "iconPath": "resources/ic_fish.png",
+        "selectedIconPath": "resources/ic_fish_light.png"
+      },
+      {
+        "pagePath": "pages/devices/devices_index",
+        "text": "设备",
+        "iconPath": "resources/ic_shebei.png",
+        "selectedIconPath": "resources/ic_shebei_light.png"
+      },
+      {
+        "pagePath": "pages/user/user_index",
+        "text": "我们",
+        "iconPath": "resources/ic_user.png",
+        "selectedIconPath": "resources/ic_user_light.png"
+      }
+    ],
+    "selectedColor": "#d81e06",
+    "color": "#ea9518"
+  }
+}

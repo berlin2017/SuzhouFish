@@ -1,0 +1,98 @@
+/* pages/list/list.wxss */
+@import "/wxParse/wxParse.wxss";
+@import "../common/footer.wxss";
+@import "../jingguan/jingguan_index.wxss";
+
+.detail_container {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.back_icon {
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  top: 5px;
+  position: absolute;
+  z-index: 100;
+}
+
+.list_layout {
+  width: 100%;
+  background-color: whitesmoke;
+  /* margin-bottom: 10px; */
+}
+
+.list_cell {
+  width: 100%;
+  height: 9em;
+  padding-top: 10px;
+  /* margin:10px auto;  */
+  padding: 10px;
+  border-bottom: 1px solid #999;
+}
+
+.cell_item {
+  width: 95%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #deb887;
+}
+
+.left_image {
+  float: left;
+  height: 9em;
+  width: 32%;
+  margin-right: 2%;
+}
+
+.right_layout {
+  float: left;
+  height: 9em;
+  width: 64%;
+}
+
+.liebiao-title {
+  height: 6em;
+  width: 90%;
+  margin: 0.2em 5%;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+.liebiao-footer {
+  height: 2.6em;
+  width: 100%;
+  margin: 0.2em 0;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+.more-text {
+  float: left;
+  margin-right: 10px;
+  font-size: 0.6em;
+  line-height: 16px;
+  
+}
+
+.more-img {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.liebiao-footer-right {
+  float: right;
+}
+
+.btn-yuyue {
+  background-color: #ff5000;
+  color: #deb887;
+}

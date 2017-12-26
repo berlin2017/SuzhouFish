@@ -1,0 +1,130 @@
+/* pages/jingguan/jingguan_index.wxss */
+@import "../common/footer.wxss";
+
+.jingguan_container {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.content{
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  position: relative;
+  transition: transform 400ms;
+}
+
+.header {
+  width: 100%;
+  top: 0;
+  background: url('http://szjidingqclxcx.0512iis.com/images/logo.png');
+  background-size: 100% 100%;
+  text-align: center;
+  color: #fff;
+  height: 40px;
+  z-index: 1000;
+  position: fixed;
+}
+
+.title {
+  color: white;
+  position: absolute;
+  font-size: 0.85rem;
+  text-align: center;
+  width: 100%;
+  line-height: 40px;
+}
+
+.menu_icon {
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  top: 5px;
+  position: absolute;
+  z-index: 100;
+}
+
+.scrollview {
+  position: absolute;
+  width: 100%;
+  padding-top: 40px;
+  background-color: whitesmoke;
+}
+
+.layout_grid {
+  width: 100%;
+  background-color: whitesmoke;
+  /* margin-bottom: 10px; */
+}
+
+.grid_cell {
+  width: 100%;
+  height: 8em;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  /* margin:10px auto;  */
+}
+
+.cell_item {
+  width: 95%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.item_image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.line {
+  margin-top: 10px;
+  width: 100%;
+  height: 1px;
+  background-color: gainsboro;
+}
+
+.navigation{
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    width: 12rem;
+    top: 0;
+    height: 100%;
+}
+
+.list_menu{
+  width: 100%;
+  height: 100%;
+}
+
+.menu_item{
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.item_text{
+  color: #DEB887;
+}
+
+.dingwei {
+    position: fixed;
+    right: .2em;
+    bottom: 2em;
+    width: 3em;
+    height: 5em;
+    opacity: 0.6;
+    z-index: 9999999;
+}

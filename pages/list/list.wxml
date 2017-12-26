@@ -1,0 +1,65 @@
+<!--pages/list/list.wxml-->
+<view class='detail_container'>
+  <view class='content' style='transform: translate3d({{style}}rem, 0, 0);' catchtouchend='closeNav'>
+    <view class='header'>
+      <image class='back_icon' src='../../resources/ic_back.png' mode='scaleToFill' catchtap='back'></image>
+      <view class='title'>列表</view>
+      <image class='menu_icon' src='../../resources/ic_more.png' mode='scaleToFill' catchtap='showNav'></image>
+    </view>
+
+    <scroll-view class='scrollview' scroll-y='true' style='height:{{height}}px'>
+
+        <view class='list_layout'>
+          <view class='list_cell' wx:for='{{listInfo}}' bindtap='toDetail' data-url='{{item.url}}' data-id='{{item.id}}'>
+            <view class='cell_item'>
+              <view class='left_image'> 
+              <image src='{{item.thumb}}' mode='scaleToFill' style='width:100%;height:100%;'></image>
+              </view>
+              <view class='right_layout'>
+                <view class="liebiao-title">{{item.title}}</view>
+                <view class="liebiao-footer">
+                        <view class="liebiao-footer-left">
+                            <image class="more-img" src="http://szjidingqclxcx.0512iis.com/images/biao.png"></image>
+                            <text class="more-text">{{item.inputtime1}}</text>
+
+
+                        </view>
+                        <view class="liebiao-footer-right">
+
+                                <button type="button" class="btn btn-yuyue" bindtap='toYuyue'>预约</button>
+
+                        </view>
+                    </view>
+               </view>
+            </view>
+          </view>
+        </view>
+
+       <import src="../../wxParse/wxParse.wxml" /> 
+      <!-- //这里data中article为bindName -->
+       <template is="wxParse" data="{{wxParseData:article.nodes}}" /> 
+
+      <include src='../common/footer.wxml' />
+
+    </scroll-view>
+
+  </view>
+
+  <view class='navigation'>
+    <view class='list_menu'>
+      <view class='menu_item' wx:for='{{navigations}}' bindtap='navigationTo' data-index='{{index}}'>
+        <text class='item_text'>{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='dingwei'>
+    <view class='dingwei-1' style='width: 2em;height: 2em;margin: .5em;border-radius: 50%;background: #ffffff;'>
+      <image src='http://szjidingqclxcx.0512iis.com/images/dianhua1.png' mode='scaleToFill' style='width:100%;height:100%;'></image>
+    </view>
+
+    <view class='dingwei-1' style='width: 2em;height: 2em;margin: .5em;border-radius: 50%;background: #ffffff;'>
+      <image src='http://szjidingqclxcx.0512iis.com/images/fenxiang.png' mode='scaleToFill' style='width:100%;height:100%;'></image>
+    </view>
+  </view>
+</view>

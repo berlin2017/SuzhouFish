@@ -1,0 +1,3 @@
+/* pages/jingguan/jingguan_index.wxss */
+@import "../common/footer.wxss";
+@import "../jingguan/jingguan_index.wxss";

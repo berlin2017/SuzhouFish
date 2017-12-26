@@ -1,0 +1,61 @@
+<!--pages/yuyue/yuyue.wxml-->
+<view class='detail_container'>
+  <view class='content' style='transform: translate3d({{style}}rem, 0, 0);' catchtouchend='closeNav'>
+    <view class='header'>
+      <image class='back_icon' src='../../resources/ic_back.png' mode='scaleToFill' catchtap='back'></image>
+      <view class='title'>预约</view>
+      <image class='menu_icon' src='../../resources/ic_more.png' mode='scaleToFill' catchtap='showNav'></image>
+    </view>
+
+    <scroll-view class='scrollview' scroll-y='true' style='height:{{height}}px'>
+
+    <view style='width:100%;margin-top:20px;'>
+      <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class='name_layout'>
+          <text class='name_title'>姓名：</text>
+          <view style='width:80%;padding-left:10px;position: relative;float:right'>
+          <input name="name_input" placeholder="请输入姓名" class='input'></input>
+          </view>
+        </view>
+      
+       <view class='name_layout'>
+          <text class='name_title'>手机：</text>
+          <view style='width:80%;padding-left:10px;position: relative;float:right'>
+          <input name="phone_input" placeholder="请输入手机号" class='input' type='number'></input>
+          </view>
+        </view>
+
+         <view class='name_layout2'>
+          <text class='name_title'>备注：</text>
+          <view style='width:80%;padding-left:10px;position: relative;float:right'>
+          <textarea class='textarea' name='beizhu_input'></textarea>
+          </view>
+        </view>
+
+        <button style='width:80%;margin-left:auto;margin-right:auto;margin-top:20px;' type='primary' form-type='submit'>确定</button>
+      </form>
+</view>
+      <include src='../common/footer.wxml' />
+
+    </scroll-view>
+
+  </view>
+
+  <view class='navigation'>
+    <view class='list_menu'>
+      <view class='menu_item' wx:for='{{navigations}}' bindtap='navigationTo' data-index='{{index}}'>
+        <text class='item_text'>{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='dingwei'>
+    <view class='dingwei-1' style='width: 2em;height: 2em;margin: .5em;border-radius: 50%;background: #ffffff;'>
+      <image src='http://szjidingqclxcx.0512iis.com/images/dianhua1.png' mode='scaleToFill' style='width:100%;height:100%;'></image>
+    </view>
+
+    <view class='dingwei-1' style='width: 2em;height: 2em;margin: .5em;border-radius: 50%;background: #ffffff;'>
+      <image src='http://szjidingqclxcx.0512iis.com/images/fenxiang.png' mode='scaleToFill' style='width:100%;height:100%;'></image>
+    </view>
+  </view>
+</view>

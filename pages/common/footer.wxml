@@ -1,0 +1,42 @@
+<!--pages/common/footer.wxml-->
+<view class='footer_container'>
+  <view class='top_btn_layout'>
+    <view class='btn_cell'>
+      <view class='btn_item'>
+        <button class='top_phone' bindtap='call' data-phone='{{addressInfo.swdh}}'>公司商务热线</button>
+      </view>
+    </view>
+
+    <view class='btn_cell'>
+      <view class='btn_item'>
+        <button class='top_phone' bindtap='goMap' data-lat='{{addressInfo.lat}}' data-lng='{{addressInfo.lng}}'>公司地址</button>
+      </view>
+    </view>
+
+    <view class='btn_cell'>
+      <view class='btn_item'>
+        <button class='top_phone' bindtap='call' data-phone='{{addressInfo.jlxsrx}}'>锦鲤销售热线 </button>
+      </view>
+    </view>
+
+    <view class='btn_cell'>
+      <view class='btn_item'>
+        <button class='top_phone' bindtap='goMap' data-lat='{{addressInfo.lat}}' data-lng='{{addressInfo.lng}}'>仓库位置</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="dizhi">
+    <text class='dizhi_tv' >
+    <!-- 手机（微信）：15190086818 \n 锦鲤销售电话：15062414664 \n 业务咨询电话：13862566206 \n 商务在线QQ:384235473 \n 邮箱：384235473@qq.com \n 微信公众平台：景观鱼池水处理 \n 苏州股权中心企业挂牌代码：900293\n -->
+    {{addressInfo.dibu}}
+    </text>
+    <view>
+      <image src= "{{addressInfo.dibuerweima}}" />
+    </view>
+    <view style="color: #3d4145;">{{addressInfo.dbwxmz}}</view>
+    <text class='dizhi_tv'>{{addressInfo.dibudizhi}}</text>
+
+  </view>
+
+</view>
