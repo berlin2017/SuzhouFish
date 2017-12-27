@@ -87,4 +87,20 @@ Page({
     });
   },
 
+  goMap: function (e) {
+    var dizhi = e.currentTarget.dataset.dizhi;
+    var lat = dizhi.split(',')[0];
+    var lng = dizhi.split(',')[1];
+    wx.navigateTo({
+      url: '../map/map_index' + '?lat=' + lat + '&lng=' + lng,
+    })
+  },
+
+  call: function (e) {
+    var phone = e.currentTarget.dataset.phone;
+    wx.makePhoneCall({
+      phoneNumber: phone,
+    })
+  },
+
 })

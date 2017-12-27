@@ -30,12 +30,13 @@
   </view>
 
   <view class='dingwei'>
-    <view class='dingwei-1' style='width: 2em;height: 2em;margin: .5em;border-radius: 50%;background: #ffffff;'>
+    <view class='dingwei-1' style='width: 2em;height: 2em;margin: .5em;border-radius: 50%;background: #ffffff;' bindtap='call' data-phone='{{addressInfo.swdh}}'>
       <image src='http://szjidingqclxcx.0512iis.com/images/dianhua1.png' mode='scaleToFill' style='width:100%;height:100%;'></image>
     </view>
 
-    <view class='dingwei-1' style='width: 2em;height: 2em;margin: .5em;border-radius: 50%;background: #ffffff;'>
-      <image src='http://szjidingqclxcx.0512iis.com/images/fenxiang.png' mode='scaleToFill' style='width:100%;height:100%;'></image>
+    <view class='dingwei-1' style='width: 2em;height: 2em;margin: .5em;background: #ffffff;background: #ffffff;border-radius: 50%;overflow:hidden;' >
+      <!-- <image src='http://szjidingqclxcx.0512iis.com/images/fenxiang.png' mode='scaleToFill' style='width:100%;height:100%;'></image> -->
+      <button open-type='share' class='share_btn' style='width:100%;height:100%;'></button>
     </view>
   </view>
 </view>

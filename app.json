@@ -3,7 +3,7 @@
     
     "pages/home/home_index",
     "pages/detail/detail",
-    
+    "pages/detail2/detail",
     "pages/yuyue/yuyue",
     "pages/list/list",
     "pages/jingguan/jingguan_index",

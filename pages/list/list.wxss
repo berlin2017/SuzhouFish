@@ -47,14 +47,14 @@
 .left_image {
   float: left;
   height: 9em;
-  width: 32%;
+  width: 40%;
   margin-right: 2%;
 }
 
 .right_layout {
   float: left;
   height: 9em;
-  width: 64%;
+  width: 56%;
 }
 
 .liebiao-title {
@@ -95,4 +95,10 @@
 .btn-yuyue {
   background-color: #ff5000;
   color: #deb887;
+}
+
+.loadmore{
+  width: 100%;
+  background-color: whitesmoke;
+  color: gray;
 }

@@ -128,3 +128,10 @@
     opacity: 0.6;
     z-index: 9999999;
 }
+
+.share_btn{
+  background: url('http://szjidingqclxcx.0512iis.com/images/fenxiang.png');
+  /* width: 2em;height: 2em;border-radius: 1em;background: #ffffff; */
+  background-size:cover;
+  border: none;
+}

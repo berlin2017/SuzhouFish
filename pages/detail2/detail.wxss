@@ -1,0 +1,83 @@
+/* pages/detail/detail.wxss */
+@import "/wxParse/wxParse.wxss";
+@import "../common/footer.wxss";
+@import "../jingguan/jingguan_index.wxss";
+
+.detail_container {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.back_icon {
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  top: 5px;
+  position: absolute;
+  z-index: 100;
+}
+
+.content-title {
+  width: 94%;
+  height: 4em;
+  margin: 0.2em 3%;
+}
+
+.content-title-title {
+  width: 100%;
+  height: 2em;
+  line-height: 2em;
+  margin: 0.2em 0;
+  font-size: 1.5em;
+  overflow: hidden;
+}
+
+.content-title-footer-left {
+  float: left;
+  font-size: 0.6em;
+}
+
+.more-text {
+  float: left;
+  margin-right: 10px;
+  font-size: 0.6em;
+  line-height: 16px;
+}
+
+.more-img {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.flex-container{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 3em;
+}
+
+.flex-item {
+  width: 45%;
+  height: 1em;
+  margin: 0.5em 2.5%;
+}
+
+.btn-yugang {
+  width: 100%;
+  text-align: center;
+  background: #00b675;
+  color: #fff;
+}
+
+.btn-yuliao {
+  width: 100%;
+  text-align: center;
+  background: #ff5000;
+  color: #fff;
+}

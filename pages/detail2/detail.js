@@ -82,26 +82,10 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    if(options.id){
-      var news_id = options.id;
-      request.getWithBaseUrl({ service: 'App.Hong.GetDetailInfo', id: news_id, table:'3_news'},function success(e){
-        that.setData({
-          newsDetailInfo:e.data.data.result
-        });
-        WxParse.wxParse('article', 'html', e.data.data.result.content, that, 5);
-      });
-    }else{
-      wx.showToast({
-        title: '获取详情失败',
-        image:'../../resources/ic_failed.png',
-        duration: 2000,
-      })
-      setTimeout(function(){
-        wx.navigateBack({
-          
-        })
-      },2000);
-    }
+    request.getWithBaseUrl({ service: 'App.Hong.GetCategoryInfo', id: 4, table: '3_share_category' }, function (e) {
+      WxParse.wxParse('article', 'html', e.data.data.result.child[options.index].content, that, 5);
+    });
+   
   },
 
   /**

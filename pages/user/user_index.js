@@ -48,10 +48,9 @@ Page({
   },
 
   goMap: function (e) {
-    var lat = e.currentTarget.dataset.lat;
-    var lng = e.currentTarget.dataset.lng;
-    lat = 31.8183600000;
-    lng = 117.2309800000;
+    var dizhi = e.currentTarget.dataset.dizhi;
+    var lat = dizhi.split(',')[0];
+    var lng = dizhi.split(',')[1];
     wx.navigateTo({
       url: '../map/map_index' + '?lat=' + lat + '&lng=' + lng,
     })
@@ -65,6 +64,12 @@ Page({
   },
 
   toList: function (e) {
+    if (e.currentTarget.dataset.content) {
+      wx.navigateTo({
+        url: '../detail2/detail' + '?index=' + e.currentTarget.dataset.index,
+      })
+      return;
+    }
     if (e.currentTarget.dataset.id) {
       wx.navigateTo({
         url: '../list/list' + '?id=' + e.currentTarget.dataset.id,

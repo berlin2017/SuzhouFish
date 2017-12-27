@@ -11,7 +11,9 @@ Page({
     height: 0,
     navigations: ['首页', '景观', '锦鲤', '设备', '我们'],
     style: 0,
-    addressInfo: null
+    addressInfo: null,
+    index:1,
+    id:null,
   },
 
   showNav: function () {
@@ -36,10 +38,9 @@ Page({
   },
 
   goMap: function (e) {
-    var lat = e.currentTarget.dataset.lat;
-    var lng = e.currentTarget.dataset.lng;
-    lat = 31.8183600000;
-    lng = 117.2309800000;
+    var dizhi = e.currentTarget.dataset.dizhi;
+    var lat = dizhi.split(',')[0];
+    var lng = dizhi.split(',')[1];
     wx.navigateTo({
       url: '../map/map_index' + '?lat=' + lat + '&lng=' + lng,
     })
@@ -77,27 +78,39 @@ Page({
     });
   },
 
+  loadmore:function(){
+    this.data.index++;
+    this.requestList();
+  },
+
+  requestList:function(){
+    var that = this;
+    request.getWithBaseUrl({ service: 'App.Hong.Index', id: that.data.id, table: '3_news', page:that.data.index }, function (e) {
+      console.log(e);
+      
+      if(that.data.index == 1){
+        that.data.listInfo = new Array();
+      }
+      if(!e.data.data.result||e.data.data.result.length<=0){
+        wx.showToast({
+          title: '没有更多数据',
+        })
+      }
+      var list = that.data.listInfo.concat(e.data.data.result);
+      that.setData({
+        listInfo: list,
+      });
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    // if(options.category){
-    //   request.getWithBaseUrl({ service: 'App.Hong.GetCategoryInfo', id: options.category, table: '3_share_category' }, function (e) {
-    //     console.log(e);
-    //     that.setData({
-    //       listInfo: e.data.data.result
-    //     });
-    //   });
-    // }
 
     if(options.id){
-      request.getWithBaseUrl({ service: 'App.Hong.Index', id: options.id, table: '3_news' }, function (e) {
-        console.log(e);
-        that.setData({
-          listInfo: e.data.data.result
-        });
-      });
+      this.data.id = options.id;
+      this.requestList();
     }
     
   },
@@ -154,7 +167,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    this.data.index = 1;
+    this.requestList();
   },
 
   /**

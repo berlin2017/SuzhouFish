@@ -14,9 +14,9 @@ Page({
       longitude: 117.2309800000,
       width:50,
       height:50,
-      title:'安徽新媒体',
+      title:'苏州祥和',
       callout: { 
-        content: '安徽新媒体',
+        content: '苏州祥和',
         borderRadius:10,
         bgColor:"#fff",
         display:'ALWAYS',
@@ -24,7 +24,7 @@ Page({
         color:'#000',
         fontSize:17
       },
-      label: '安徽新媒体',
+      label: '苏州祥和',
       iconPath: '../../resources/ic_marker.png',
     }],
    
@@ -45,8 +45,10 @@ Page({
   onLoad: function (options) {
     if(options){
       this.setData({
-        lat: options.lat,
-        lng: options.lng,
+        lat: Number(options.lat),
+          lng: Number(options.lng),
+        'markers[0].latitude': Number(options.lat),
+        'markers[0].longitude': Number(options.lng),
       });
     }
   },

@@ -8,39 +8,10 @@
     </view>
 
     <scroll-view class='scrollview' scroll-y='true' style='height:{{height}}px'>
-
-      <view class='content-title'>
-        <text class="content-title-title">{{newsDetailInfo.title}}</text>
-        <view class="content-title-footer clearfix">
-          <view class="content-title-footer-left">苏州市祥和精创净化工程有限公司</view>
-          <view class="liebiao-footer-left">
-            <image class="more-img" src="http://szjidingqclxcx.0512iis.com/images/biao.png" style="margin-left: 3px;"></image>
-            <view class="more-text">{{newsDetailInfo.inputtime1}}</view>
-          </view>
-        </view>
-
-      </view>
-      <view class="flex-container">
-        <view class="flex-item">
-          <button class="btn-yugang" bindtap='toYuyue'>鱼缸预约</button>
-        </view>
-        <view class="flex-item">
-          <button class="btn-yuliao" bindtap='toYuyue'>鱼料预约</button>
-        </view>
-      </view>
-
       <view style='width:95%;margin-left:auto;margin-right:auto;margin-top:10px;'>
         <import src="../../wxParse/wxParse.wxml" />
         <!-- //这里data中article为bindName -->
         <template is="wxParse" data="{{wxParseData:article.nodes}}" />
-      </view>
-      <view class="flex-container">
-        <view class="flex-item">
-          <button class="btn-yugang" bindtap='toYuyue'>鱼缸预约</button>
-        </view>
-        <view class="flex-item">
-          <button class="btn-yuliao" bindtap='toYuyue'>鱼缸预约</button>
-        </view>
       </view>
 
       <include src='../common/footer.wxml' />
