@@ -25,7 +25,7 @@
         </view>
       </view>
 
-      <view class='mui-content-dingzhi-chanpin'>景观</view>
+      <view class='mui-content-dingzhi-chanpin' bindtap='navigationTo' data-index='1'>景观</view>
 
     </view>
 
@@ -46,7 +46,7 @@
         </view>
       </view>
 
-      <view class='mui-content-dingzhi-chanpin' style='background-color:#4c644c;'>景观</view>
+      <view class='mui-content-dingzhi-chanpin' style='background-color:#4c644c;' bindtap='navigationTo' data-index='1'>景观</view>
 
     </view>
 
@@ -66,7 +66,7 @@
         </view>
       </view>
 
-      <view class='mui-content-dingzhi-chanpin' style='background-color:#4c644c;'>锦鲤</view>
+      <view class='mui-content-dingzhi-chanpin' style='background-color:#4c644c;' bindtap='navigationTo' data-index='2'>锦鲤</view>
 
     </view>
 
@@ -86,7 +86,7 @@
         </view>
       </view>
 
-      <view class='mui-content-dingzhi-chanpin' style='background-color:#4c644c;'>设备</view>
+      <view class='mui-content-dingzhi-chanpin' style='background-color:#4c644c;' bindtap='navigationTo' data-index='3'>设备</view>
 
     </view>
 

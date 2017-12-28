@@ -39,6 +39,31 @@ Page({
     }
   },
 
+  navigationTo: function (e) {
+    var index = e.currentTarget.dataset.index;
+    var url = null;
+    switch (index) {
+      case '0':
+        url = '../home/home_index';
+        break;
+      case '1':
+        url = '../jingguan/jingguan_index';
+        break;
+      case '2':
+        url = '../jinli/jinli_index';
+        break;
+      case '3':
+        url = '../devices/devices_index';
+        break;
+      case '4':
+        url = '../user/user_index';
+        break;
+    }
+    wx.switchTab({
+      url: url,
+    })
+  },
+
   call:function(e){
     var phone = e.currentTarget.dataset.phone;
     wx.makePhoneCall({
