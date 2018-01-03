@@ -29,6 +29,8 @@
         </view>
       </view>
 
+      <video src='{{newsDetailInfo.videourl}}' wx:if='{{newsDetailInfo.videourl}}' class='detail_video'></video>
+
       <view style='width:95%;margin-left:auto;margin-right:auto;margin-top:10px;'>
         <import src="../../wxParse/wxParse.wxml" />
         <!-- //这里data中article为bindName -->

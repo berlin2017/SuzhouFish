@@ -27,8 +27,8 @@
 
 .content-title-title {
   width: 100%;
-  height: 2em;
-  line-height: 2em;
+  /* height: 2em; */
+  /* line-height: 2em; */
   margin: 0.2em 0;
   font-size: 1.5em;
   overflow: hidden;
@@ -65,7 +65,8 @@
 .flex-item {
   width: 45%;
   height: 1em;
-  margin: 0.5em 2.5%;
+  margin-right: 2.5%;
+  margin-left:2.5%;
 }
 
 .btn-yugang {
@@ -80,4 +81,12 @@
   text-align: center;
   background: #ff5000;
   color: #fff;
+}
+
+.detail_video{
+  display: flex;
+  width: 95%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }

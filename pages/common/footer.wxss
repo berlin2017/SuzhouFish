@@ -21,11 +21,11 @@ view{
 
 .btn_cell {
   width: 50%;
-  height: 2rem;
-  margin: 0.5rem auto;
+  /* height: 2rem; */
+  /* margin: 0.5rem auto; */
   text-align: center;
   float: left;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .btn_item {

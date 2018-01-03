@@ -36,7 +36,7 @@ App({
     var that = this;
     request.get(
       'https://hzy.api.szjisou.com/',
-       { table: '3_block', service:'App.Hong.GetBase'},
+      { service: 'App.Hong.GetBase',table: '3_block'},
        function(res){
          that.globalData.addressInfo = res.data.data.result;
     });
